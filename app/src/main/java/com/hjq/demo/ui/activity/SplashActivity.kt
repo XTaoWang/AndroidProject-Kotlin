@@ -33,11 +33,22 @@ class SplashActivity : AppActivity() {
 
     override fun initView() {
         // 设置动画监听
-        lottieView?.addAnimatorListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationEnd(animation: Animator?) {
+        lottieView?.addAnimatorListener(object : Animator.AnimatorListener {
+            override fun onAnimationStart(animation: Animator) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animator) {
                 lottieView?.removeAnimatorListener(this)
                 HomeActivity.start(this@SplashActivity)
                 finish()
+            }
+
+            override fun onAnimationCancel(animation: Animator) {
+
+            }
+
+            override fun onAnimationRepeat(animation: Animator) {
             }
         })
     }
