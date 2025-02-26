@@ -63,7 +63,7 @@ class SlantedTextView @JvmOverloads constructor(
         val array: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.SlantedTextView)
         setText(array.getString(R.styleable.SlantedTextView_android_text))
         setTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(R.styleable.SlantedTextView_android_textSize,
-            resources.getDimension(R.dimen.sp_12).toInt()).toFloat())
+            resources.getDimension(com.hjq.base.R.dimen.sp_12).toInt()).toFloat())
         setTextColor(array.getColor(R.styleable.SlantedTextView_android_textColor, Color.WHITE))
         setTextStyle(Typeface.defaultFromStyle(array.getInt(R.styleable.SlantedTextView_android_textStyle, Typeface.NORMAL)))
         setGravity(array.getInt(R.styleable.SlantedTextView_android_gravity, Gravity.END))
@@ -368,8 +368,9 @@ class SlantedTextView @JvmOverloads constructor(
      * 获取当前主题的强调色
      */
     private fun getAccentColor(): Int {
+        val resId = context.resources.getIdentifier("colorAccent", "attr", context.packageName)
         val typedValue = TypedValue()
-        context.theme.resolveAttribute(R.attr.colorAccent, typedValue, true)
+        context.theme.resolveAttribute(resId, typedValue, true)
         return typedValue.data
     }
 }

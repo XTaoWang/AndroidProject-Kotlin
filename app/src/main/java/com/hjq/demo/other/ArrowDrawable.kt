@@ -150,10 +150,10 @@ class ArrowDrawable private constructor(private val builder: Builder) : Drawable
         var shadowColor: Int
 
         init {
-            backgroundColor = ContextCompat.getColor(context, R.color.black)
-            shadowColor = ContextCompat.getColor(context, R.color.black20)
-            arrowHeight = context.resources.getDimension(R.dimen.dp_6).toInt()
-            radius = context.resources.getDimension(R.dimen.dp_4).toInt()
+            backgroundColor = ContextCompat.getColor(context, com.hjq.base.R.color.black)
+            shadowColor = ContextCompat.getColor(context, com.hjq.base.R.color.black20)
+            arrowHeight = context.resources.getDimension(com.hjq.base.R.dimen.dp_6).toInt()
+            radius = context.resources.getDimension(com.hjq.base.R.dimen.dp_4).toInt()
             shadowSize = 0
             arrowOffsetX = 0
             arrowOffsetY = 0

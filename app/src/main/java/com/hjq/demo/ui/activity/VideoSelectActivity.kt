@@ -131,7 +131,7 @@ class VideoSelectActivity : AppActivity(), StatusAction, Runnable, BaseAdapter.O
             // 禁用动画效果
             it.itemAnimator = null
             // 添加分割线
-            it.addItemDecoration(GridSpaceDecoration(resources.getDimension(R.dimen.dp_5).toInt()))
+            it.addItemDecoration(GridSpaceDecoration(resources.getDimension(com.hjq.base.R.dimen.dp_5).toInt()))
             // 设置滚动监听
             it.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
@@ -194,7 +194,7 @@ class VideoSelectActivity : AppActivity(), StatusAction, Runnable, BaseAdapter.O
                         }
                         // 执行列表动画
                         recyclerView?.layoutAnimation = AnimationUtils.loadLayoutAnimation(
-                            this@VideoSelectActivity, R.anim.layout_from_right)
+                            this@VideoSelectActivity, com.hjq.base.R.anim.layout_from_right)
                         recyclerView?.scheduleLayoutAnimation()
                     }
                 })
@@ -415,7 +415,7 @@ class VideoSelectActivity : AppActivity(), StatusAction, Runnable, BaseAdapter.O
 
             // 执行列表动画
             recyclerView?.layoutAnimation = AnimationUtils.loadLayoutAnimation(
-                this@VideoSelectActivity, R.anim.layout_fall_down)
+                this@VideoSelectActivity, com.hjq.base.R.anim.layout_fall_down)
             recyclerView?.scheduleLayoutAnimation()
             if (allVideo.isEmpty()) {
                 // 显示空布局

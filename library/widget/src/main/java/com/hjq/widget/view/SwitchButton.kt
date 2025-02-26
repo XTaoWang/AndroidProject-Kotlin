@@ -106,7 +106,7 @@ class SwitchButton @JvmOverloads constructor(
         when (MeasureSpec.getMode(finalWidthMeasureSpec)) {
             MeasureSpec.AT_MOST, MeasureSpec.UNSPECIFIED -> {
                 finalWidthMeasureSpec = MeasureSpec.makeMeasureSpec(
-                    (resources.getDimension(R.dimen.dp_56) + paddingLeft + paddingRight).toInt(), MeasureSpec.EXACTLY)
+                    (resources.getDimension(com.hjq.base.R.dimen.dp_56) + paddingLeft + paddingRight).toInt(), MeasureSpec.EXACTLY)
             }
             MeasureSpec.EXACTLY -> {}
         }

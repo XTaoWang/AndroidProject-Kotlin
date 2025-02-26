@@ -3,6 +3,7 @@ apply from : '../../common.gradle'
 
 android {
 
+    namespace 'com.hjq.umeng'
     defaultConfig {
         // 模块混淆配置
         consumerProguardFiles 'proguard-umeng.pro'
@@ -23,6 +24,11 @@ android {
                 'WX_SECRET' : WX_APP_SECRET
         ])
     }
+
+    buildFeatures {
+        buildConfig true // 启用 BuildConfig 自定义字段功能
+    }
+
 }
 
 // 友盟统计集成文档：https://developer.umeng.com/docs/119267/detail/118584

@@ -69,19 +69,19 @@ class SettingBar @JvmOverloads constructor(
         rightView.isSingleLine = true
         leftView.ellipsize = TextUtils.TruncateAt.END
         rightView.ellipsize = TextUtils.TruncateAt.END
-        leftView.setLineSpacing(resources.getDimension(R.dimen.dp_5), leftView.lineSpacingMultiplier)
-        rightView.setLineSpacing(resources.getDimension(R.dimen.dp_5), rightView.lineSpacingMultiplier)
+        leftView.setLineSpacing(resources.getDimension(com.hjq.base.R.dimen.dp_5), leftView.lineSpacingMultiplier)
+        rightView.setLineSpacing(resources.getDimension(com.hjq.base.R.dimen.dp_5), rightView.lineSpacingMultiplier)
         leftView.setPaddingRelative(
-            resources.getDimension(R.dimen.dp_15).toInt(),
-            resources.getDimension(R.dimen.dp_12).toInt(),
-            resources.getDimension(R.dimen.dp_15).toInt(),
-            resources.getDimension(R.dimen.dp_12).toInt()
+            resources.getDimension(com.hjq.base.R.dimen.dp_15).toInt(),
+            resources.getDimension(com.hjq.base.R.dimen.dp_12).toInt(),
+            resources.getDimension(com.hjq.base.R.dimen.dp_15).toInt(),
+            resources.getDimension(com.hjq.base.R.dimen.dp_12).toInt()
         )
         rightView.setPaddingRelative(
-            resources.getDimension(R.dimen.dp_15).toInt(),
-            resources.getDimension(R.dimen.dp_12).toInt(),
-            resources.getDimension(R.dimen.dp_15).toInt(),
-            resources.getDimension(R.dimen.dp_12).toInt()
+            resources.getDimension(com.hjq.base.R.dimen.dp_15).toInt(),
+            resources.getDimension(com.hjq.base.R.dimen.dp_12).toInt(),
+            resources.getDimension(com.hjq.base.R.dimen.dp_15).toInt(),
+            resources.getDimension(com.hjq.base.R.dimen.dp_12).toInt()
         )
         val array: TypedArray = getContext().obtainStyledAttributes(attrs, R.styleable.SettingBar)
 
@@ -142,13 +142,13 @@ class SettingBar @JvmOverloads constructor(
             if (array.hasValue(R.styleable.SettingBar_bar_leftDrawablePadding)) array.getDimensionPixelSize(
                 R.styleable.SettingBar_bar_leftDrawablePadding,
                 0
-            ) else resources.getDimension(R.dimen.dp_10).toInt()
+            ) else resources.getDimension(com.hjq.base.R.dimen.dp_10).toInt()
         )
         setRightDrawablePadding(
             if (array.hasValue(R.styleable.SettingBar_bar_rightDrawablePadding))
                 array.getDimensionPixelSize(R.styleable.SettingBar_bar_rightDrawablePadding, 0)
             else
-                resources.getDimension(R.dimen.dp_10).toInt()
+                resources.getDimension(com.hjq.base.R.dimen.dp_10).toInt()
         )
 
         // 图标设置
@@ -163,21 +163,21 @@ class SettingBar @JvmOverloads constructor(
         setLeftTextColor(
             array.getColor(
                 R.styleable.SettingBar_bar_leftTextColor,
-                ContextCompat.getColor(getContext(), R.color.black80)
+                ContextCompat.getColor(getContext(), com.hjq.base.R.color.black80)
             )
         )
         setRightTextColor(
             array.getColor(
                 R.styleable.SettingBar_bar_rightTextColor,
-                ContextCompat.getColor(getContext(), R.color.black60)
+                ContextCompat.getColor(getContext(), com.hjq.base.R.color.black60)
             )
         )
 
         // 文字大小设置
         setLeftTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(
-            R.styleable.SettingBar_bar_leftTextSize, resources.getDimension(R.dimen.sp_15).toInt()).toFloat())
+            R.styleable.SettingBar_bar_leftTextSize, resources.getDimension(com.hjq.base.R.dimen.sp_15).toInt()).toFloat())
         setRightTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(
-            R.styleable.SettingBar_bar_rightTextSize, resources.getDimension(R.dimen.sp_14).toInt()).toFloat())
+            R.styleable.SettingBar_bar_rightTextSize, resources.getDimension(com.hjq.base.R.dimen.sp_14).toInt()).toFloat())
 
         // 分割线设置
         if (array.hasValue(R.styleable.SettingBar_bar_lineDrawable)) {
@@ -198,19 +198,19 @@ class SettingBar @JvmOverloads constructor(
             val drawable = StateListDrawable()
             drawable.addState(
                 intArrayOf(android.R.attr.state_pressed),
-                ColorDrawable(ContextCompat.getColor(getContext(), R.color.black5))
+                ColorDrawable(ContextCompat.getColor(getContext(), com.hjq.base.R.color.black5))
             )
             drawable.addState(
                 intArrayOf(android.R.attr.state_selected),
-                ColorDrawable(ContextCompat.getColor(getContext(), R.color.black5))
+                ColorDrawable(ContextCompat.getColor(getContext(), com.hjq.base.R.color.black5))
             )
             drawable.addState(
                 intArrayOf(android.R.attr.state_focused),
-                ColorDrawable(ContextCompat.getColor(getContext(), R.color.black5))
+                ColorDrawable(ContextCompat.getColor(getContext(), com.hjq.base.R.color.black5))
             )
             drawable.addState(
                 intArrayOf(),
-                ColorDrawable(ContextCompat.getColor(getContext(), R.color.white))
+                ColorDrawable(ContextCompat.getColor(getContext(), com.hjq.base.R.color.white))
             )
             background = drawable
 

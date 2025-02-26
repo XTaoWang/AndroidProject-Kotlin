@@ -1,5 +1,11 @@
 apply plugin : 'com.android.library'
 apply from : '../../common.gradle'
+android {
+    namespace 'com.hjq.widget'
+    buildFeatures {
+        buildConfig true // 启用 BuildConfig 自定义字段功能
+    }
+}
 
 dependencies {
     // 基础库（不包任何第三方框架）

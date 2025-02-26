@@ -400,8 +400,9 @@ class SubmitButton @JvmOverloads constructor(
      * 获取当前主题的强调色
      */
     private fun getAccentColor(): Int {
+        val resId = context.resources.getIdentifier("colorAccent", "attr", context.packageName)
         val typedValue = TypedValue()
-        context.theme.resolveAttribute(R.attr.colorAccent, typedValue, true)
+        context.theme.resolveAttribute(resId, typedValue, true)
         return typedValue.data
     }
 }
